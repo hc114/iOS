@@ -1,0 +1,24 @@
+public class Solution {
+
+	public static boolean canWinNim(int n) {
+		//No matter what size the heap is we want to be at 8 for our turn.
+
+		//Take away maximum number until the number of pebbles in the heap reach 8<=n<11
+
+		//Strategy: Try to have the opponent reach 4. So if it is 8 other person's turn 
+		int count=0;
+		//Is it your turn or my turn
+		if(count % 2==0 && n%4==0){
+			System.out.println("it's my turn and you lose");
+		}else{
+			System.out.println("it's your turn and you win");
+		}
+		
+		return false;
+	}
+
+	public static void main(String args[]){
+		canWinNim(1547);
+		return;
+	}
+};

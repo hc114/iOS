@@ -1,0 +1,13 @@
+
+public class Solution {
+	public static int addDigits(int num){
+		int lengthofnumber = String.valueOf(num).length();
+		int divisor=10*lengthofnumber;
+		int digit = num/divisor;
+		
+		return 0;
+	}
+	public static void main(String[] args){
+		addDigits(555);
+	}
+}

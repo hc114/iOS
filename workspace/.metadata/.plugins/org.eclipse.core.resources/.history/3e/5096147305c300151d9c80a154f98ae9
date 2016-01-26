@@ -1,0 +1,10 @@
+package deleteNode;
+
+public class Solution {
+    public void deleteNode(ListNode node) {
+    	
+        ListNode temp = new ListNode(node.next.val);
+        temp.next=node.next.next;
+        node=temp;
+    }
+}
