@@ -1,0 +1,19 @@
+
+public class Solution {
+	public static ListNode oddEvenList(ListNode head){
+
+		return head;
+	}
+	
+	public static void main(String[] args){
+		int[] test={1,2,3,4,5,6,7,8};
+		ListNode testHead = new ListNode(test[0]);
+		for(int i=0; i<test.length; i++){
+			testHead.next=new ListNode(test[i-1]);
+			System.out.println(testHead.val);
+			testHead=testHead.next;
+		}
+
+	}
+
+}

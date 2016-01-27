@@ -1,0 +1,33 @@
+
+public class Solution {
+	public static ListNode oddEvenList(ListNode head){
+		ListNode temp = head;
+		if(head.val%2==1){
+			int switchNo=temp.next.val;
+			temp.next.val=head.val;
+			head.val=switchNo;
+			temp=temp.next;
+			head=head.next;
+		}else{
+			head=head.next;
+		}
+		return head;
+	}
+	
+	public static void main(String[] args){
+		int[] test={1,2,3,4,5,6,7,8};
+		ListNode testHead = new ListNode(test[0]);
+		ListNode start=testHead;
+		for(int i=1; i<test.length; i++){
+			testHead.next=new ListNode(test[i]);
+			testHead=testHead.next;
+		}
+		//creating the output List
+		for(int j=1; j<test.length; j++){
+			ListNode outputHead=oddEvenList(start);
+			System.out.println(outputHead.val);
+			outputHead=outputHead.next;
+		}
+	}
+
+}
