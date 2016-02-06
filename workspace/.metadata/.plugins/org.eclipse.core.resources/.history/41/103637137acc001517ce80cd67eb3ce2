@@ -1,0 +1,9 @@
+
+public class Problem5 {
+	static void Solution(TreeNode t){
+		
+	}
+	public static void main(String[] args){
+		
+	}
+}

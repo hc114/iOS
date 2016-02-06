@@ -1,0 +1,12 @@
+
+public class Problem3 {
+	static boolean Solution(String[] a, String[] b){
+		HashMap<String,String> table  = new HashMap<>();
+
+
+
+
+
+		return false;
+	}
+}

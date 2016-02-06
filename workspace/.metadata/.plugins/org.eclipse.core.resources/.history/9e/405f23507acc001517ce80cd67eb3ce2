@@ -1,0 +1,14 @@
+
+public class Problem5 {
+	static TreeNode Solution(TreeNode head, TreeNode insert){
+		if(head==null){
+			return insert;
+		}
+		
+		
+		return null;
+	}
+	public static void main(String[] args){
+		
+	}
+}

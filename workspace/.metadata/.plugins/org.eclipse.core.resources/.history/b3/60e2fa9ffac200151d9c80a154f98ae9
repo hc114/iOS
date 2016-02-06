@@ -1,9 +1,0 @@
-package maxTrees;
-
-public class Solution {
-	public static int maxDepth(TreeNode root){
-		return 0;
-	}
-}
-
-

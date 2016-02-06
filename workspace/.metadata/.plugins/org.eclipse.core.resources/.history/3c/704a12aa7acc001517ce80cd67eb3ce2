@@ -1,0 +1,27 @@
+
+public class Problem5 {
+	static TreeNode Solution(TreeNode head, TreeNode insert){
+		if(head==null){
+			return insert;
+		}
+		
+		while(head.hasChildren()){
+			if(head.val<insert.val){
+				head=head.getRightChild();
+			}else{
+				head=head.getLeftChild()
+			}
+		}
+		
+		if(head.val<insert.val){
+			head.right=insert;
+		}else{
+			head.left=insert;
+		}
+		
+		return null;
+	}
+	public static void main(String[] args){
+		
+	}
+}

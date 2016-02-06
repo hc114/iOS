@@ -1,0 +1,30 @@
+import java.util.HashMap;
+
+public class Problem3 {
+	static boolean Solution(String[] a, String[] b){
+		HashMap<String,Integer> a_table  = new HashMap<>();
+		HashMap<String,Integer> b_table = new HashMap<>();
+
+		for(int i=0; i<a.length; i++){
+			if(!a_table.containsKey(a[i])){
+				a_table.put(a[i], 1);
+			}else{
+				int freq =  a_table.get(a[i])+1;
+				a_table.put(a[i],freq);
+			}
+		}
+		System.out.println(a_table.toString());
+
+
+
+
+
+		return false;
+	}
+
+	static void main(String[] args){
+		String[] a ={"a","b","c","c","d","d","d","e"};
+		String[] b = {"a","b","b","c","d","d","d","e","e"};
+		Solution(a,b);
+	}
+}

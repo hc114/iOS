@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Ascending {
+	static void ascendingOrder(ArrayList<Integer> nums){
+		Stack<Integer> sortStack = new Stack<>();
+		ArrayList<Integer> popped = new ArrayList<>();
+		
+		int index = 0;
+		while(nums!=null){
+			//sortStack.push(nums.get(index));
+			//nums.remove(new Integer(nums.get(index)));
+			
+			if(sortStack==null&&popped==null){
+				sortStack.push(nums.get(index));
+			}
+			
+			if(popped!=null){
+				sortStack.push(popped.get(index));
+			}
+			
+			if(nums.get(index+1)>sortStack.pop()){
+				sortStack.push(nums.get(index));
+				nums.remove(new Integer(nums.get(index)));
+				index++;
+				
+			}else{
+				popped.add(sortStack.pop());
+			}
+		}
+	}
+	
+	
+	static void main(String[] args){
+
+	}
+}

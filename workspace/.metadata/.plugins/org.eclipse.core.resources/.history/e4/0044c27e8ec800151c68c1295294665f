@@ -1,0 +1,36 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution {
+	public static String getHint(String secret, String guess){
+		ArrayList<Character> myList = new ArrayList<>();
+		Set<Character> mySet = new HashSet<>();
+		int Bulls =0;
+		int Cows = 0;
+
+		for(int i=0; i<secret.length(); i++){
+			mySet.add(secret.charAt(i));	
+		}
+		System.out.println(mySet.toString());
+
+
+		for(int j=0; j<guess.length(); j++){
+			if(mySet.contains(guess.charAt(j))){
+				if(secret.charAt(j)==guess.charAt(j)){
+					Bulls++;
+					mySet.remove(secret.charAt(j));
+					System.out.println(secret.charAt(j) + "and" + guess.charAt(j));
+				}else{
+					Cows++;
+				}
+
+			}
+		}
+		return String.format("%dA%dB", Bulls,Cows);
+	}
+
+	public static void main(String[] args){
+		String result=getHint("1234","2155");
+		System.out.println(result);
+	}
+}

@@ -1,0 +1,20 @@
+
+public class Problem1 {
+	static int[] Solution(int[] unsorted){
+		int unsorted_int = unsorted[unsorted.length];
+		for(int i=0; i<unsorted.length; i++){
+			if(unsorted_int<unsorted[i]){
+				unsorted_int = unsorted[i];
+				unsorted[i]=unsorted[unsorted.length];
+				unsorted[unsorted.length]=unsorted_int;
+				
+				System.out.println(unsorted[i]);
+				System.out.println(unsorted[unsorted.length]);
+			}
+		}
+		return null;
+	}
+	public static void main(Stringp[] args){
+		
+	}
+}

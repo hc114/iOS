@@ -1,0 +1,24 @@
+
+public class SolutionII {
+	public static String getHint(String secret, String guess){
+		//Create listNode	
+		for(int i=0; i<secret.length(); i++){
+			ListNode temp = new ListNode(secret.charAt(i));
+			ListNode head = temp;
+			temp=temp.next;
+			System.out.println(temp.val);
+
+			ListNode guessTemp = new ListNode(guess.charAt(i));
+			ListNode guessHead = guessTemp;
+			guessTemp = guessTemp.next;
+			System.out.println(guessTemp.val);
+		}
+
+		//Compare (heads are head, guessHead)
+		return "";
+	}
+
+	public static void main(String[] args){
+		getHint("1234","0111");
+	}
+}

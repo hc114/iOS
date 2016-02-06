@@ -1,0 +1,9 @@
+
+public class Problem6 {
+	static int Sum(TreeNode head){
+		return 0;
+	}
+	static void main(String[] args){
+		
+	}
+}
