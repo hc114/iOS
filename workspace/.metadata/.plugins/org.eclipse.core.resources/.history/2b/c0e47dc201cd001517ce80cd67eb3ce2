@@ -1,0 +1,8 @@
+
+//Sort a linked list that contains just 0s and 1s. Modify the list such that all 0s come before all 1s
+public class Problem7 {
+	void Solution8(){
+		
+	}
+
+}
