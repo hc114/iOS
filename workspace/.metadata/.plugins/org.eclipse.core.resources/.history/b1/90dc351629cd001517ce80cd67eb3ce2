@@ -1,0 +1,24 @@
+import java.util.Stack;
+
+//Write a function which takes a stack as input and returns a new stack which has the elements reversed
+public class Problem9 {
+	static Stack Solution(Stack input){
+		
+		return null;
+	}
+	static void main(String[] args){
+		Stack input = new Stack();
+		Stack output = new Stack();
+		int[] a={1,2,3,4,5,6,7,8,9,10};
+		for(int i=0; i<a.length; i++){
+			input.push(a[i]);
+		}
+		output = Solution(input);
+		
+		//print out the returned input
+		for(int j=0; j<a.length; j++){
+			System.out.println(output.pop().toString());
+		}
+	}
+
+}

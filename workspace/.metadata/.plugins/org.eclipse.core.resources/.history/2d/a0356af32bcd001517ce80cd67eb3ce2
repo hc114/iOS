@@ -1,0 +1,11 @@
+import java.util.Stack;
+
+//Take out all even numbers from a stack
+public class Problem10 {
+	Stack Solution(Stack input){
+		return null;
+	}
+	public static void main(String[] args){
+		
+	}
+}

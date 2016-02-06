@@ -1,0 +1,29 @@
+import java.util.Stack;
+
+//Take out all even numbers from a stack
+public class Problem10 {
+	static Stack Solution(Stack input){
+		Stack even = new Stack();
+		while(input!=null){
+			if((int)input.pop()%2.equals(0))
+			
+		}
+		return null;
+	}
+	public static void main(String[] args){
+		Stack input = new Stack();
+		Stack output = new Stack();
+		Stack temp = new Stack();
+		int[] a={1,2,3,4,5,6,7,8,9,10};
+		for(int i=0; i<a.length; i++){
+			input.push(a[i]);
+			temp.push(a[i]);
+		}
+		
+		output = Solution(input);
+
+		//print out the returned input
+		System.out.println(temp.toString());
+		System.out.println(output.toString());
+	}
+}

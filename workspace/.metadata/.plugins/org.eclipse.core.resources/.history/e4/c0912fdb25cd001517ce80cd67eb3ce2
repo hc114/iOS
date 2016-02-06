@@ -1,0 +1,9 @@
+import java.util.Stack;
+
+//Write a function which takes a stack as input and returns a new stack which has the elements reversed
+public class Problem9 {
+	Stack Solution(Stack input){
+		return null;
+	}
+
+}
