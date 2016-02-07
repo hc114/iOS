@@ -24,13 +24,13 @@ public class Problem12 {
 	static Queue OptimizedSolution(Queue input){
 		int originalLength = input.size();
 		int index=12;
-		
-		for(int i=0; i<originalLength-2; i++){
+		for(int i=0; i<originalLength; i++){
 			if(index==0){
 				input.poll();
 				input.add(input.poll());
+				System.out.println(input.toString());
 			}
-			System.out.println(input.toString());
+			
 			input.add(input.poll());
 			index--;
 		
@@ -47,9 +47,9 @@ public class Problem12 {
 			input.add(a[i]);
 		}
 
-		//temp = Solution(input);
-		temp = OptimizedSolution(input);
-		System.out.println(temp.toString());
-		//System.out.println(input.toString());
+		temp = Solution(input);
+		input = OptimizedSolution(input);
+		//System.out.println(temp.toString());
+		System.out.println(OptimizedSolution(input));
 	}
 }
