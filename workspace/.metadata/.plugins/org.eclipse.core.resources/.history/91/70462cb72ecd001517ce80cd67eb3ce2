@@ -1,0 +1,8 @@
+import java.util.Queue;
+
+//Write a function to check if two queues are identical. It's okay to modify/destroy the two queues
+public class Problem11 {
+	static Queue Solution(){
+		return null;
+	}
+}

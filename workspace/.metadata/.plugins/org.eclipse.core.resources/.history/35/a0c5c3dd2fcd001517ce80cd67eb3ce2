@@ -1,0 +1,21 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+//Write a function to check if two queues are identical. It's okay to modify/destroy the two queues
+public class Problem11 {
+	static Queue Solution(){
+		
+		return null;
+	}
+	
+	public static void main(String[] args){
+		Queue input = new LinkedList();
+		Queue output = new LinkedList();
+		Queue temp = new LinkedList();
+		int[] a={2,4,5,5,5,7,6,8,2,9};
+		int[] b={2,4,5,5,5,6,7,8,2,9};
+		
+
+	}
+}
