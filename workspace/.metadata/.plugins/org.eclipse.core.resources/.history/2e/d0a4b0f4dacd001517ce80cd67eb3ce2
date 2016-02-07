@@ -1,0 +1,35 @@
+/*Celebrity Questions*/
+public class Problem21 {
+	int findCelebrity(int people){
+		int candidate = findCandidate(people);
+		if(isCelebrity(people,candidate)){
+			return candidate;
+		}
+		return -1;
+		return 0;
+	}
+	
+	int findCandidate(int people){
+		int candidate=0;
+		for(int i=0; i<people; i++){
+			if(knows(candidate,i)){
+				candidate=i;
+			}
+		}
+	return candidate;
+	}
+	
+	boolean isCelebrity(int people, int candidate){
+		for(int i=0; i<people; i++){
+			if(i!=candidate){
+				if(knows(candidate,i)|| !knows(i,candidate)){
+					//candidate is not a celebrity
+					return false;
+				}
+				
+			}
+			return true;
+		}
+	}
+
+}
