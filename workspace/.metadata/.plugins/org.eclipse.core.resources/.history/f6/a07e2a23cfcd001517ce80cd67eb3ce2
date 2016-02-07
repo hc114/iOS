@@ -1,0 +1,10 @@
+//Use depth-first search, check if a tree contains a value
+public class Problem17 {
+	static Boolean Solution(){
+		return false;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

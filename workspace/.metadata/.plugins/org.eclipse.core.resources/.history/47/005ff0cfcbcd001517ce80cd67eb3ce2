@@ -1,0 +1,11 @@
+//Given an array that is sorted then rotated, find the minimum value
+public class Problem16 {
+	static void Solution(int[] b){
+		
+	}
+	
+	public static void main(String[] args){
+		int[]a = {6,7,8,9,11,15,20,3,4,5};
+		Solution(a);
+	}
+}
