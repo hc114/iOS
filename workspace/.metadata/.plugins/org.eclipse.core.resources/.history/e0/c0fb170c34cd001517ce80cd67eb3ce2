@@ -1,0 +1,11 @@
+import java.util.Queue;
+
+//Write a function to remove the 13th element from the queue
+public class Problem12 {
+	static Queue Solution(){
+		
+	}
+	public static void main(String[] args){
+		
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+//Write a function to remove the 13th element from the queue
+public class Problem12 {
+	static Queue Solution(Queue input){
+		Queue temp = new LinkedList();
+		int index = 13;
+		while(!input.peek().equals(null)){
+			if(index!=0){
+				temp.add(input.poll());
+				index--;
+			}else{
+				input.remove();
+				temp.add(input.poll());
+			}
+			
+		}
+		return temp;
+	}
+	public static void main(String[] args){
+		
+	}
+}
