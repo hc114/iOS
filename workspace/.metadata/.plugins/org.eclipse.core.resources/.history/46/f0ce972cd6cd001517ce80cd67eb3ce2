@@ -1,0 +1,11 @@
+//Given a string, print all permutations of that string. You can assume the world does not have any duplicate characters"
+public class Problem20 {
+	static void Solution(){
+		
+	}
+	
+	public static void main(String[] args){
+		
+	}
+
+}
