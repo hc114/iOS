@@ -1,0 +1,6 @@
+/* Do a preorder Traversal of a tree*/
+public class Preorder_Traversal {
+	static TreeNode Pre_Order(TreeNode root){
+		
+	}
+}

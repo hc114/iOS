@@ -40,5 +40,12 @@ public class Problem21 {
 		}
 		return true;
 	}
+	
+	boolean knows(int i, int c){
+		/*
+		 * Code to get rid of errors
+		 */
+		return false;
+	}
 
 }

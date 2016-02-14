@@ -1,6 +1,0 @@
-
-public class ListNode {
-	char val;
-	ListNode next;
-	ListNode(char x) { val = x; }
-}

@@ -1,0 +1,44 @@
+/*Celebrity Questions*/
+public class Problem21 {
+	int findCelebrity(int people){
+		int candidate = findCandidate(people);
+		if(isCelebrity(people,candidate)){
+			return candidate;
+		}
+		return -1;
+	}
+
+	/*Find the candidate
+	 * starting from the begining, we check if the candidate knows i
+	 * if they do then they are note the celebrity so we go to the next person*/
+	int findCandidate(int people){
+		int candidate=0;
+		for(int i=0; i<people; i++){
+			if(knows(candidate,i)){
+				candidate=i;
+			}
+		}
+		return candidate;
+	}
+
+	/*checking if they are celebrity. 
+	 * Going through the peope again, if we missed anyone
+	 * we check if they the candidate knows them, or they know the candidate
+	 * if the candidate knows them, our chosen candidate is not the person,
+	 * if they know the candidate, they are not the person
+	 * elseif, the candidate we choaes before is the celebrity
+	 */
+	boolean isCelebrity(int people, int candidate){
+		for(int i=0; i<people; i++){
+			if(i!=candidate){
+				if(knows(candidate,i)|| !knows(i,candidate)){
+					//candidate is not a celebrity
+					return false;
+				}
+
+			}
+		}
+		return true;
+	}
+
+}

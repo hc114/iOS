@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+/* Do a preorder Traversal of a tree: data->left->right*/
+public class Preorder_Traversal {
+	static TreeNode Pre_Order(Queue<TreeNode> queue, TreeNode root){
+		if(root==null){
+			return null;
+		}
+		
+		if(!root.hasChildren()){
+			queue.add(root);
+			return root;
+		}else{
+			
+		}
+		if(!queue.isEmpty()){
+			TreeNode node = queue.poll();
+		}
+		
+		
+		
+		if(root.left!=null){
+			queue.add(root.left);
+		}	
+		
+		if(root.right!=null){
+			queue.add(root.right);
+		}
+		return null;
+	}
+	
+	
+}
