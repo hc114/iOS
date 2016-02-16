@@ -1,6 +1,7 @@
 "use strict";
  
 var React = require("react-native");
+var Calendar = require("react-native-calendar");
  
 var {
     Component,
@@ -12,6 +13,9 @@ var {
 } = React;
  
 var ToDo = require("./ToDo");
+var Calendar=require("./Calendar");
+
+
  
 class LoginPage extends Component {
  
@@ -86,8 +90,8 @@ class LoginPage extends Component {
           } else {
             console.log("Authenticated successfully with payload:", authData);
             props.navigator.push({        
-            title: "Reminders",
-            component: ToDo,
+            title: "Calendar",
+            component: Calendar,
             passProps: {username: self.state.username, password: self.state.password},
             });
           }
