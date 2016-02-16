@@ -17,6 +17,7 @@ class LoginPage extends Component {
  
     constructor(props) {
         super(props);
+        var ref = new Firebase("https://sweltering-fire-3013.firebaseio.com");
         this.state = {
             username: "",
             password: ""
@@ -41,20 +42,73 @@ class LoginPage extends Component {
                         onChange={(event) => this.setState({password: event.nativeEvent.text})}
                         style={styles.formInput}
                         value={this.state.password} />
-                    <TouchableHighlight onPress={(this.onSubmitPressed.bind(this))} style={styles.button}>
+                    <TouchableHighlight onPress={this.authenticateWithPass.bind(this)} style={styles.button}>
                         <Text style={styles.buttonText}>Submit</Text>
                     </TouchableHighlight>
+                    <TouchableHighlight onPress={this.onCreatePressed.bind(this)} style={styles.button}>
+                        <Text style = {styles.buttonText}>Create Account</Text>
+                    </TouchableHighlight> 
+                    <TouchableHighlight onPress={this.onFacebookPressed.bind(this)} style={styles.button}>
+                        <Text style = {styles.buttonText}>Facebook</Text>
+                    </TouchableHighlight>   
                 </View>
             </View>
         );
     }
- 
-    onSubmitPressed() {
-        this.props.navigator.push({
+
+    //Facbook Login
+    onFacebookPressed(){
+        var ref = new Firebase("https://sweltering-fire-3013.firebaseio.com");
+        ref.authWithOAuthPopup("facebook", function(error, authData) {
+            remember: "sessionOnly"
+          if (error) {
+            console.log("Login Failed!", error);
+          } else {
+            // the access token will allow us to make Open Graph API calls
+            console.log(authData.facebook.accessToken);
+          }
+        }, {
+          scope: "email,user_likes" // the permissions requested
+        });
+    }
+
+    authenticateWithPass(event){
+        var ref = new Firebase("https://sweltering-fire-3013.firebaseio.com");
+        var signal = false;
+        var props=this.props;
+        var self = this;
+        ref.authWithPassword({
+          email    : this.state.username,
+          password : this.state.password
+        }, function(error, authData) {
+          if (error) {
+            console.log("Login Failed!", error);
+          } else {
+            console.log("Authenticated successfully with payload:", authData);
+            props.navigator.push({        
             title: "Reminders",
             component: ToDo,
-            passProps: {username: this.state.username, password: this.state.password},
+            passProps: {username: self.state.username, password: self.state.password},
+            });
+          }
         });
+            
+        
+    }
+ 
+
+    onCreatePressed(){
+        var ref = new Firebase("https://sweltering-fire-3013.firebaseio.com");
+        ref.createUser({
+          email    : this.state.username,
+          password : this.state.password
+        }, function(error, userData) {
+          if (error) {
+            console.log("Error creating user:", error);
+          } else {
+            console.log("Successfully created user account with uid:", userData.uid);
+          }
+});
     }
  
 };
