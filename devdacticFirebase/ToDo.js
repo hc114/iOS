@@ -1,6 +1,7 @@
 'use strict'
 var React = require('react-native');
 
+
 var {
   Component,
   AppRegistry,
@@ -14,10 +15,10 @@ var {
 }=React;
 
 var Firebase = require('firebase');
-
+var moment=require('moment');
 
 //Add the class
-class devdacticFirebase extends Component{
+class ToDo extends Component{
   //Your Application Code
 constructor(props) {
   super(props);
@@ -206,5 +207,5 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports=devdacticFirebase ;
+module.exports=ToDo ;
 //AppRegistry.registerComponent('devdacticFirebase', () => devdacticFirebase);

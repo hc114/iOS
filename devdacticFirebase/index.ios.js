@@ -17,7 +17,7 @@ var devdacticFirebase = React.createClass({
             <NavigatorIOS
                 style={styles.navigationContainer}
                 initialRoute={{
-                title: "Navigator Example",
+                title: "Login",
                 component: LoginView,
             }} />
         );
